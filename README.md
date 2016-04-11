@@ -1,22 +1,33 @@
-# bone-salad
+
+# Bone-salad
 
 #File System
-/js<br />
-  -app    [your js files]<br />
-    -users<br />
-      -user.js<br />
-      -user-collection.js<br />
-      -user-view.js<br />
-      -routes.js   [ routes for user module]<br />
-    -login<br />
-      -login.js<br />
-      -login-collection.js<br />
-      login-view.js<br />
-      routes.js    [ routes for login module]<br />
-  -vendor [ vendor lib like jquery, backbone, requireJS etc.]<br />
-  -init.js<br />
-  -common.js<br />
-  -index.html<br />
+<dl>
+<dt>/js
+	<dl>
+	 <dt> -app    [your js files]
+	    	<dl>-users
+		      <dt>-user.js</dt>
+		      <dt>-user-collection.js</dt>
+		      <dt>-user-view.js</dt>
+		      <dt>-routes.js   [ routes for user module]</dt>
+		    </dl>
+	   </dt>
+	</dl>
+    <dl>-login
+	      <dt>-login.js</dt>
+	      <dt>-login-collection.js</dt>
+	      <dt>login-view.js</dt>
+	      <dt>routes.js    [ routes for login module]</dt>
+	      
+    </dl>
+</dt>
+<dt>-vendor [ vendor lib like jquery, backbone, requireJS etc.]</dt>
+<dt>-init.js</dt>
+<dt>-common.js</dt>
+<dt>-index.html</dt>
+  
+</dl>
   
   # Simple Rules
   1. All ur files should be in app/[module-name].<br />
@@ -24,10 +35,12 @@
      and finally a routes.js for routes requied for ur module.<br />
   3. Requies to register routes in js/app/routes.js file. Just append ur module file in routers variable as follows:<br />
       // This process should be auto ... May be in next version... :D<br />
-      var routers  = [<br />
-						require('app/home/router'),<br />
-						require('app/login/router')<br />
-					];<br />
+      <pre>
+      	var routers  = [
+						require('app/home/router'),
+						require('app/login/router')
+					];
+		</pre>
 	4. Backbone.marionette.js is used as base framework.<br />
 	5. Handelbar.js can be used for templating // not required.<br />
 
